@@ -129,7 +129,7 @@ export const Navbar: React.FC = () => {
             className="md:hidden bg-white border-b border-slate-100 px-6 py-5 shadow-lg overflow-hidden"
           >
             <div className="flex flex-col space-y-3">
-              {NAV_ITEMS.map((item) => (
+              {/* {NAV_ITEMS.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
@@ -138,7 +138,27 @@ export const Navbar: React.FC = () => {
                 >
                   {item.label}
                 </a>
-              ))}
+              ))} */}
+              {NAV_ITEMS.map((item) => (
+  <button
+    key={item.label}
+    onClick={() => {
+      setMobileMenuOpen(false);
+
+      setTimeout(() => {
+        document
+          .getElementById(item.href.substring(1))
+          ?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+      }, 200); // same as AnimatePresence exit duration
+    }}
+    className="text-left text-sm font-medium text-slate-700 hover:text-slate-900 py-1 transition-colors"
+  >
+    {item.label}
+  </button>
+))}
               <div className="pt-2 border-t border-slate-100">
                 <a
                   href="#contact"

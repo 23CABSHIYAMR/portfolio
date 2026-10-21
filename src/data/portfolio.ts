@@ -24,7 +24,13 @@ export interface ExperienceItem {
 }
 
 export interface SkillCategory {
-  category: 'Frontend' | 'Backend' | 'Database' | 'Tools' | 'Concepts' | 'Currently Learning';
+  category:
+    | "Frontend"
+    | "Backend"
+    | "Database"
+    | "Tools"
+    | "Concepts"
+    | "Currently Learning";
   skills: {
     name: string;
     level: string;
@@ -35,137 +41,390 @@ export interface SkillCategory {
 
 export const PERSONAL_INFO = {
   name: "SHIYAM R",
-  title: "Software Engineer",
-  tagline: "Building performant, scalable and intuitive web applications.",
-  bio: "BCA Graduate and Software Engineer with hands-on experience building modern web applications using React.js, Next.js, Node.js and REST APIs. Passionate about creating clean user experiences, solving real-world problems, and continuously learning modern software engineering practices.",
-  location: "India",
-  availabilityStatus: "Available for full-time software engineering roles",
+  title: "Full Stack Developer",
+  tagline:
+    "Building reliable, performant web applications and real-time systems.",
+  bio:
+    "Full Stack Developer experienced in building and maintaining web applications using React.js, Next.js, Node.js, Express.js, and MongoDB. Hands-on experience with REST API development, real-time messaging, authentication, role-based access control, caching, production troubleshooting, and application performance testing.",
+  location: "Coimbatore, Tamil Nadu, India",
+  availabilityStatus: "Open to software engineering opportunities",
   email: "shiyamramesh01@gmail.com",
   socials: {
     github: "https://github.com/23CABSHIYAMR",
     linkedin: "https://www.linkedin.com/in/shiyam-r-3a885a315",
     hackerrank: "https://www.hackerrank.com/profile/shiyamramesh01",
-    resume: "/images/shiyamSDEResume.pdf"
+    resume: "/images/ShiyamSporadaResume.pdf",
   },
   stats: [
-    { label: "Professional Internship", value: "1" },
     { label: "Production Issues Resolved", value: "50+" },
-    { label: "Projects Built", value: "10+" },
-    { label: "Core Stack", value: "React • Next.js • Node.js" }
-  ]
+    { label: "Automated Tests Passed", value: "20/20" },
+    { label: "Inter-College Coding Awards", value: "2" },
+    { label: "Core Stack", value: "React • Node.js • MongoDB" },
+  ],
 };
 
 export const SKILLS_DATA: SkillCategory[] = [
   {
     category: "Frontend",
     skills: [
-      { name: "HTML5", level: "Advanced", description: "Semantic markup, web accessibility & structured DOM layouts" },
-      { name: "CSS3", level: "Advanced", description: "Flexbox, CSS Grid, responsive design & CSS animations" },
-      { name: "JavaScript", level: "Advanced", description: "ESNext features, asynchronous programming, DOM APIs & logic" },
-      { name: "React.js", level: "Advanced", description: "Hooks, component state, lifecycle management & performance" },
-      { name: "Next.js", level: "Advanced", description: "App router, SSR/SSG rendering, routing & API integration" },
-      { name: "Tailwind CSS", level: "Advanced", description: "Utility-first styling, design system layouts & responsive UI" }
-    ]
+      {
+        name: "React.js",
+        level: "Proficient",
+        description:
+          "Reusable components, hooks, state management, responsive interfaces, and rendering optimization.",
+      },
+      {
+        name: "Next.js",
+        level: "Proficient",
+        description:
+          "Application routing, rendering concepts, reusable layouts, and API integration.",
+      },
+      {
+        name: "JavaScript",
+        level: "Proficient",
+        description:
+          "ES6+, asynchronous programming, promises, event handling, and application logic.",
+      },
+      {
+        name: "HTML5",
+        level: "Proficient",
+        description:
+          "Semantic markup, accessible structures, and maintainable page layouts.",
+      },
+      {
+        name: "CSS3",
+        level: "Proficient",
+        description:
+          "Responsive layouts, Flexbox, CSS Grid, and interface styling.",
+      },
+      {
+        name: "Tailwind CSS",
+        level: "Proficient",
+        description:
+          "Utility-first styling and responsive UI development.",
+      },
+    ],
   },
   {
     category: "Backend",
     skills: [
-      { name: "Node.js", level: "Proficient", description: "Asynchronous server runtime & backend application development" },
-      { name: "Express.js", level: "Proficient", description: "RESTful API routes, middleware architecture & request handlers" },
-      { name: "REST APIs", level: "Advanced", description: "Endpoint design, HTTP methods & JSON data exchange" }
-    ]
+      {
+        name: "Node.js",
+        level: "Proficient",
+        description:
+          "Asynchronous backend development, process management, and server-side application logic.",
+      },
+      {
+        name: "Express.js",
+        level: "Proficient",
+        description:
+          "REST APIs, middleware, centralized error handling, and modular backend architecture.",
+      },
+      {
+        name: "Socket.IO",
+        level: "Working Knowledge",
+        description:
+          "Real-time events, client-server communication, connection handling, and reconnection strategies.",
+      },
+      {
+        name: "REST APIs",
+        level: "Proficient",
+        description:
+          "API design, authentication, request validation, error handling, and service integration.",
+      },
+    ],
   },
   {
     category: "Database",
     skills: [
-      { name: "MongoDB", level: "Proficient", description: "Document database modeling, Mongoose & query optimization" },
-      { name: "SQL", level: "Proficient", description: "Relational database queries, data schemas & table operations" }
-    ]
+      {
+        name: "MongoDB",
+        level: "Proficient",
+        description:
+          "Schema modeling, Mongoose, query optimization, indexing, and application data management.",
+      },
+      {
+        name: "SQL",
+        level: "Working Knowledge",
+        description:
+          "SQL queries, joins, stored procedures, relational data modeling, and database operations.",
+      },
+      {
+        name: "MySQL",
+        level: "Working Knowledge",
+        description:
+          "Relational database fundamentals and SQL-based data operations.",
+      },
+      {
+        name: "IndexedDB",
+        level: "Working Knowledge",
+        description:
+          "Browser-side storage for locally cached application data and media.",
+      },
+    ],
   },
   {
     category: "Tools",
     skills: [
-      { name: "Git", level: "Proficient", description: "Version control workflows, branching & commit history" },
-      { name: "GitHub", level: "Advanced", description: "Code repositories, pull requests & collaborative development" },
-      { name: "Postman", level: "Advanced", description: "API endpoint testing, collection runner & HTTP debugging" },
-      { name: "Figma", level: "Proficient", description: "UI layout inspection, wireframes & developer handoff" }
-    ]
+      {
+        name: "Git",
+        level: "Proficient",
+        description:
+          "Version control, branching, merges, and collaborative development workflows.",
+      },
+      {
+        name: "GitHub",
+        level: "Proficient",
+        description:
+          "Repository management, source control, and project collaboration.",
+      },
+      {
+        name: "Playwright",
+        level: "Working Knowledge",
+        description:
+          "Automated browser testing and end-to-end workflow validation.",
+      },
+      {
+        name: "Lighthouse",
+        level: "Working Knowledge",
+        description:
+          "Frontend performance analysis and Core Web Vitals optimization.",
+      },
+      {
+        name: "Winston",
+        level: "Working Knowledge",
+        description:
+          "Structured application logging and production troubleshooting.",
+      },
+      {
+        name: "Nginx",
+        level: "Working Knowledge",
+        description:
+          "Reverse proxy configuration, static asset serving, and deployment troubleshooting.",
+      },
+      {
+        name: "Postman / APIDog",
+        level: "Working Knowledge",
+        description:
+          "API testing, request validation, and endpoint debugging.",
+      },
+    ],
   },
   {
     category: "Concepts",
     skills: [
-      { name: "Object-Oriented Programming", level: "Advanced", description: "Classes, encapsulation, inheritance & modular design" },
-      { name: "Data Structures & Algorithms (Java)", level: "Proficient", description: "Problem solving, arrays, recursion & algorithmic thinking in Java" },
-      { name: "Authentication (JWT)", level: "Proficient", description: "JSON Web Tokens, session handling & secure OAuth integration" },
-      { name: "Computer Networking", level: "Proficient", description: "TCP/IP fundamentals, HTTP/HTTPS protocols & network stack" }
-    ]
+      {
+        name: "Authentication",
+        level: "Proficient",
+        description:
+          "JWT-based authentication, OAuth integration, and session management.",
+      },
+      {
+        name: "Role-Based Access Control",
+        level: "Working Knowledge",
+        description:
+          "Role and permission enforcement across application features and resources.",
+      },
+      {
+        name: "Caching",
+        level: "Working Knowledge",
+        description:
+          "Application-level caching, cache invalidation, and data retrieval optimization.",
+      },
+      {
+        name: "Event-Driven Systems",
+        level: "Working Knowledge",
+        description:
+          "Real-time events, message processing, acknowledgments, and duplicate-event handling.",
+      },
+      {
+        name: "Data Structures & Algorithms (Java)",
+        level: "Proficient",
+        description:
+          "Problem solving and algorithm fundamentals using Java.",
+      },
+      {
+        name: "Object-Oriented Programming",
+        level: "Proficient",
+        description:
+          "Encapsulation, inheritance, polymorphism, abstraction, and modular design.",
+      },
+    ],
   },
   {
     category: "Currently Learning",
     skills: [
-      { name: "AWS", level: "Learning", description: "Cloud computing infrastructure, S3 & deployment services" },
-      { name: "Docker", level: "Learning", description: "Containerization fundamentals & isolated environment builds" },
-      { name: "Kubernetes", level: "Learning", description: "Container orchestration & cluster management concepts" }
-    ]
-  }
+      {
+        name: "Docker",
+        level: "Learning",
+        description:
+          "Containerization fundamentals and reproducible development environments.",
+      },
+      {
+        name: "AWS",
+        level: "Learning",
+        description:
+          "Cloud infrastructure and application deployment fundamentals.",
+      },
+    ],
+  },
 ];
 
 export const PROJECTS_DATA: Project[] = [
   {
+    id: "multi-user-whatsapp",
+    title: "Multi-User WhatsApp Application",
+    subtitle: "Real-time messaging and multi-user workflow platform",
+    description:
+      "A WhatsApp Web-inspired application with QR-based authentication, chat synchronization, group management, real-time updates, and backend messaging workflows.",
+    longDescription:
+      "Developed and maintained a multi-user messaging application using React.js, Node.js, Express.js, Socket.IO, and MongoDB. Implemented QR-based authentication and session persistence, modular backend services, real-time communication, role-based access control, and group allocation workflows. Worked on message-processing reliability, media caching, structured logging, production deployment, and automated workflow testing.",
+    techStack: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "Socket.IO",
+      "MongoDB",
+      "IndexedDB",
+      "Playwright",
+      "Nginx",
+    ],
+    image: "/images/whatsapp-app.png",
+    demoUrl: "",
+    githubUrl: "",
+    featured: true,
+    highlights: [
+      "Implemented QR-based authentication and session persistence.",
+      "Built REST APIs for messaging, chat synchronization, and group management.",
+      "Implemented role-based access control and grid/branch-based group allocation.",
+      "Improved message-processing reliability with acknowledgment tracking and duplicate-event handling.",
+      "Implemented structured logging, error handling, and production deployment configuration.",
+      "Validated application workflows with 20 passing Playwright tests in 13.2 seconds.",
+    ],
+  },
+  {
     id: "habit-tracker-app",
     title: "Habit Tracker App",
-    subtitle: "Full-stack habit tracking & analytics application",
-    description: "A full-stack habit tracking application featuring JWT & Google OAuth authentication, analytics dashboard, REST APIs, caching, optimized MongoDB queries, reusable components, and performance optimizations.",
-    longDescription: "A full-stack habit tracking application engineered with Next.js, Node.js, Express.js, and MongoDB. Features secure JWT and Google OAuth authentication pipelines, an analytics dashboard for habit progress tracking, backend caching, optimized MongoDB database queries, and reusable UI components tuned for performance.",
-    techStack: ["Next.js", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"],
+    subtitle: "Full-stack habit tracking and progress analytics",
+    description:
+      "A habit-tracking application with authentication, progress analytics, REST APIs, caching, and responsive dashboards.",
+    longDescription:
+      "Built a full-stack habit tracker using Next.js, Node.js, Express.js, and MongoDB. Implemented JWT and Google OAuth authentication, validation middleware, optimized database queries, compound indexing, and caching. Created reusable interfaces for weekly, monthly, yearly, and all-time habit progress analytics.",
+    techStack: [
+      "Next.js",
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Tailwind CSS",
+    ],
     image: "/images/habit-tracker.png",
     demoUrl: "https://habit-tracker-client-bay.vercel.app",
     githubUrl: "https://github.com/23CABSHIYAMR/habit-tracker-client",
     featured: true,
     highlights: [
-      "JWT and Google OAuth authentication mechanisms",
-      "Interactive habits tracking and progress analytics dashboard",
-      "Optimized MongoDB queries and caching for fast response times",
-      "Modular, reusable UI component architecture"
-    ]
+      "JWT and Google OAuth authentication.",
+      "Weekly, monthly, yearly, and all-time progress analytics.",
+      "MongoDB query optimization and compound indexing.",
+      "Reusable responsive components and application-level caching.",
+    ],
   },
   {
     id: "aeronero-replica",
     title: "Aeronero Replica",
-    subtitle: "Pixel-perfect web experience recreation",
-    description: "A premium responsive recreation of the Aeronero website built to demonstrate pixel-perfect UI implementation, smooth animations, responsive layouts, and clean component architecture.",
-    longDescription: "A premium responsive recreation of the Aeronero web application built using Next.js, Tailwind CSS, and Framer Motion. Focused on demonstrating pixel-perfect design implementation, fluid animations, mobile-first responsive layouts, and scalable component structure.",
-    techStack: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript", "React.js"],
+    subtitle: "Pixel-focused responsive website recreation",
+    description:
+      "A responsive recreation of the Aeronero website showcasing interface implementation, animations, and component architecture.",
+    longDescription:
+      "Recreated the Aeronero web experience using Next.js, Tailwind CSS, Framer Motion, and React.js, focusing on responsive layouts, visual consistency, smooth animations, and reusable components.",
+    techStack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "TypeScript",
+      "React.js",
+    ],
     image: "/images/aeronero.png",
     demoUrl: "https://aeronero-replica.vercel.app/",
     githubUrl: "https://github.com/23CABSHIYAMR/aeronero-replica",
     featured: true,
     highlights: [
-      "Pixel-perfect responsive layout implementation across desktop and mobile screens",
-      "Fluid scroll animations and micro-interactions powered by Framer Motion",
-      "Clean, modular component structure adhering to modern engineering standards"
-    ]
+      "Responsive layouts for desktop and mobile screens.",
+      "Scroll animations and micro-interactions with Framer Motion.",
+      "Reusable components and maintainable UI structure.",
+    ],
   },
   {
     id: "shell-to-node-generator",
     title: "Shell-to-Node Server Generator",
     subtitle: "CLI tool for automated backend scaffolding",
-    description: "CLI tool that automatically generates a Node.js backend boilerplate with folder structure and dependencies to speed up backend development.",
-    longDescription: "A CLI tool written in Shell Scripting and Node.js that automates the generation of Node.js backend boilerplate applications. It automatically sets up standardized folder structures, configures server files, and installs core dependencies to streamline backend development.",
+    description:
+      "A command-line tool that automates Node.js backend project setup with a standardized folder structure and dependencies.",
+    longDescription:
+      "Built a shell-script and Node.js-based generator to streamline backend project initialization. The tool automates boilerplate creation, directory setup, server scaffolding, and dependency installation.",
     techStack: ["Shell Script", "Node.js", "Express.js", "CLI"],
     image: "/images/node-server-generator.png",
     demoUrl: "",
     githubUrl: "https://github.com/23CABSHIYAMR/node-server-generator",
     featured: true,
     highlights: [
-      "Automated creation of Node.js and Express backend boilerplate structure",
-      "Pre-configured directory tree for routes, controllers, middleware, and models",
-      "Accelerates backend project initialization and development workflows"
-    ]
-  }
+      "Automated Node.js backend boilerplate generation.",
+      "Standardized folder structures and server setup.",
+      "Reduced repetitive project initialization tasks.",
+    ],
+  },
+  {
+    id: "javascript-mini-projects",
+    title: "JavaScript Mini Projects",
+    subtitle: "Interactive web applications and browser utilities",
+    description:
+      "A collection of small projects demonstrating JavaScript fundamentals, interactive UI development, and browser functionality.",
+    longDescription:
+      "Built mini projects including a Blackjack game, calculator, palindrome checker, currency converter, and Chrome Tab Saver extension using HTML, CSS, and JavaScript.",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Chrome Extensions"],
+    image: "/images/javascript-projects.png",
+    demoUrl: "",
+    githubUrl: "",
+    featured: false,
+    highlights: [
+      "Built interactive browser-based applications.",
+      "Practiced DOM manipulation and event handling.",
+      "Created a Chrome extension for saving tabs.",
+    ],
+  },
 ];
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
+  {
+    id: "sporada-full-stack-developer",
+    company: "Sporada Secure India Private Limited",
+    role: "Full Stack Developer",
+    duration: "September 2026 – Present",
+    location: "Coimbatore, Tamil Nadu, India",
+    type: "Full-time",
+    description: [
+      "Develop and maintain a multi-user messaging application using React.js, Node.js, Express.js, Socket.IO, and MongoDB.",
+      "Build REST APIs for authentication, message delivery, chat synchronization, group management, and external service integrations.",
+      "Implement supervisor-worker architecture with worker recovery and restart mechanisms to improve backend resilience.",
+      "Develop FIFO message-processing queues with acknowledgment tracking, duplicate-event handling, and crash recovery.",
+      "Implement role-based access control and grid/branch-based group allocation for business workflows.",
+      "Optimize chat rendering and media handling using selective virtualization, IndexedDB, and historical media recovery.",
+      "Implement structured logging with Winston, centralized error handling, and production deployment configuration using Nginx.",
+      "Validate application workflows using Playwright and optimize frontend performance using Lighthouse.",
+    ],
+    techStack: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Socket.IO",
+      "IndexedDB",
+      "Playwright",
+      "Winston",
+      "Nginx",
+    ],
+  },
   {
     id: "opsmonsters-trainee",
     company: "OpsMonsters Software Consultants",
@@ -174,13 +433,18 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     location: "India",
     type: "Trainee",
     description: [
-      "Built production features using React.js and Next.js.",
-      "Integrated REST APIs to connect user interfaces with backend endpoints.",
-      "Built reusable UI components for improved code maintainability.",
-      "Worked with Git workflows for source code management.",
-      "Fixed 50+ production UI and functional issues to elevate user experience.",
-      "Improved application responsiveness and performance across devices."
+      "Developed and enhanced production features using React.js, Next.js, and REST APIs.",
+      "Integrated backend APIs and built reusable UI components for the TraderLogs module.",
+      "Resolved 50+ production UI and functional issues, improving application reliability and user experience.",
+      "Collaborated through Git workflows, including branching, code reviews, and merge-conflict resolution.",
     ],
-    techStack: ["React.js", "Next.js", "REST APIs", "Git", "JavaScript", "Tailwind CSS"]
-  }
+    techStack: [
+      "React.js",
+      "Next.js",
+      "JavaScript",
+      "REST APIs",
+      "Git",
+      "Tailwind CSS",
+    ],
+  },
 ];

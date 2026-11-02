@@ -2,9 +2,8 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SectionHeader } from './UI/SectionHeader';
+import { Code2, Database, Wrench, BookOpen, Sparkles, Flame } from 'lucide-react';
 import { SKILLS_DATA, SkillCategory } from '@/data/portfolio';
-import { Code2, Database, Wrench, BookOpen, Sparkles, CheckCircle2, Flame } from 'lucide-react';
 
 export const Skills: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -16,7 +15,6 @@ export const Skills: React.FC = () => {
       case 'Frontend':
         return Code2;
       case 'Backend':
-        return Database;
       case 'Database':
         return Database;
       case 'Tools':
@@ -36,39 +34,47 @@ export const Skills: React.FC = () => {
       : SKILLS_DATA.filter((c) => c.category === selectedCategory);
 
   return (
-    <section id="skills" className="py-20 md:py-28 max-w-5xl mx-auto px-6 sm:px-8">
-      <SectionHeader
-        badge="Technical Skills"
-        title="Skills & Technologies"
-        description="A comprehensive overview of frontend libraries, backend frameworks, database systems, core CS concepts, and tools I utilize."
-      />
+    <section id="skills" className="py-24 md:py-36 max-w-7xl mx-auto px-6 sm:px-8 relative">
+      <div className="pb-12 border-b border-white/10 space-y-3">
+        <div className="flex items-center gap-2 text-xs font-mono-tech text-cyan-400 uppercase tracking-widest">
+          <span className="w-2 h-2 rounded-full bg-cyan-400" />
+          <span>[ 05 // TECHNICAL CAPABILITIES ]</span>
+        </div>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight uppercase">
+          SKILLS & TECHNOLOGIES
+        </h2>
+        <p className="text-[#8d94a5] text-sm sm:text-base max-w-xl">
+          Core competencies, backend frameworks, database architectures, and development toolchains.
+        </p>
+      </div>
 
       {/* Filter Tabs */}
-      <div className="flex flex-wrap items-center gap-2 mb-10">
+      <div className="flex flex-wrap items-center gap-2 pt-8 pb-10">
         {categories.map((cat) => {
           const isActive = selectedCategory === cat;
           const isLearning = cat === 'Currently Learning';
+
           return (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 text-xs font-semibold rounded-lg transition-all flex items-center gap-1.5 ${
+              className={`px-4 py-2 rounded-full text-xs font-mono-tech font-bold uppercase tracking-wider transition-all duration-200 flex items-center gap-2 ${
                 isActive
-                  ? 'bg-slate-900 text-white shadow-2xs'
+                  ? 'bg-white text-black shadow-lg'
                   : isLearning
-                  ? 'bg-amber-50 text-amber-800 border border-amber-200/80 hover:bg-amber-100/80'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200/80 hover:text-slate-900'
+                  ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20 hover:border-amber-500/40'
+                  : 'bg-[#12141c] text-[#8d94a5] border border-white/10 hover:text-white hover:border-white/20'
               }`}
             >
-              {isLearning && <Flame className="w-3.5 h-3.5 text-amber-500" />}
+              {isLearning && <Flame className="w-3.5 h-3.5 text-amber-400" />}
               <span>{cat}</span>
             </button>
           );
         })}
       </div>
 
-      {/* Categories Grid */}
-      <div className="space-y-8">
+      {/* Skills Grid */}
+      <div className="space-y-12">
         {filteredData.map((catGroup: SkillCategory, groupIdx: number) => {
           const Icon = getCategoryIcon(catGroup.category);
           const isCurrentlyLearning = catGroup.category === 'Currently Learning';
@@ -79,98 +85,45 @@ export const Skills: React.FC = () => {
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: groupIdx * 0.1 }}
-              className={`border rounded-2xl p-6 sm:p-8 shadow-2xs transition-all ${
-                isCurrentlyLearning
-                  ? 'bg-slate-900 text-white border-slate-800'
-                  : 'bg-white border-slate-200/80'
-              }`}
+              transition={{ duration: 0.4, delay: groupIdx * 0.08 }}
+              className="space-y-6"
             >
-              {/* Category Header */}
-              <div
-                className={`flex items-center justify-between pb-6 mb-6 border-b ${
-                  isCurrentlyLearning ? 'border-slate-800' : 'border-slate-100'
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <div
-                    className={`w-10 h-10 rounded-xl flex items-center justify-center ${
-                      isCurrentlyLearning
-                        ? 'bg-slate-800 text-amber-400'
-                        : 'bg-slate-100 text-slate-900'
-                    }`}
-                  >
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3
-                      className={`text-xl font-bold tracking-tight ${
-                        isCurrentlyLearning ? 'text-white' : 'text-slate-900'
-                      }`}
-                    >
-                      {catGroup.category}
-                    </h3>
-                    <p
-                      className={`text-xs font-medium ${
-                        isCurrentlyLearning ? 'text-slate-400' : 'text-slate-500'
-                      }`}
-                    >
-                      {catGroup.skills.length} Technologies
-                    </p>
-                  </div>
+              <div className="flex items-center gap-3 border-b border-white/10 pb-3">
+                <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400">
+                  <Icon className="w-4 h-4" />
                 </div>
-
-                {isCurrentlyLearning && (
-                  <span className="px-3 py-1 text-xs font-semibold rounded-full bg-amber-400/10 text-amber-300 border border-amber-400/20 flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5" />
-                    <span>Active Expansion</span>
-                  </span>
-                )}
+                <h3 className="text-sm font-mono-tech font-bold uppercase tracking-widest text-white">
+                  {catGroup.category}
+                </h3>
               </div>
 
-              {/* Skills Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {catGroup.skills.map((skill) => (
                   <div
                     key={skill.name}
-                    className={`p-4 rounded-xl border transition-all group ${
+                    className={`p-5 rounded-2xl border transition-all duration-300 ${
                       isCurrentlyLearning
-                        ? 'border-slate-800 bg-slate-800/50 hover:bg-slate-800 hover:border-slate-700'
-                        : 'border-slate-100 bg-slate-50/50 hover:bg-white hover:border-slate-300 hover:shadow-2xs'
+                        ? 'bg-[#14120e] border-amber-500/20 hover:border-amber-500/40'
+                        : 'bg-[#0e1017] border-white/10 hover:border-white/25 hover:shadow-xl'
                     }`}
                   >
-                    <div className="flex items-center justify-between mb-1.5">
-                      <div className="flex items-center gap-2">
-                        <CheckCircle2
-                          className={`w-4 h-4 transition-colors ${
-                            isCurrentlyLearning
-                              ? 'text-amber-400'
-                              : 'text-slate-400 group-hover:text-slate-900'
-                          }`}
-                        />
-                        <span
-                          className={`text-sm font-semibold ${
-                            isCurrentlyLearning ? 'text-white' : 'text-slate-900'
-                          }`}
-                        >
-                          {skill.name}
-                        </span>
-                      </div>
+                    <div className="flex items-center justify-between pb-2">
+                      <h4 className="text-base font-bold text-white tracking-tight">
+                        {skill.name}
+                      </h4>
                       <span
-                        className={`px-2 py-0.5 text-[10px] font-mono font-medium uppercase tracking-wider rounded ${
-                          isCurrentlyLearning
-                            ? 'bg-amber-400/20 text-amber-300 border border-amber-400/30'
-                            : 'bg-slate-200/70 text-slate-700'
+                        className={`px-2 py-0.5 rounded text-[10px] font-mono-tech uppercase tracking-wider font-semibold ${
+                          skill.level === 'Proficient'
+                            ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30'
+                            : skill.level === 'Learning'
+                            ? 'bg-amber-500/15 text-amber-400 border border-amber-500/30'
+                            : 'bg-cyan-500/15 text-cyan-400 border border-cyan-500/30'
                         }`}
                       >
                         {skill.level}
                       </span>
                     </div>
-                    <p
-                      className={`text-xs pl-6 leading-relaxed ${
-                        isCurrentlyLearning ? 'text-slate-300' : 'text-slate-500'
-                      }`}
-                    >
+                    <p className="text-xs text-[#8d94a5] leading-relaxed pt-1">
                       {skill.description}
                     </p>
                   </div>

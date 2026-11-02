@@ -10,28 +10,29 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="border-t border-slate-200/80 bg-white py-12 text-slate-500 text-xs">
-      <div className="max-w-5xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
-          <span className="font-semibold text-slate-900">
+    <footer className="border-t border-white/10 bg-[#06070a] py-14 text-[#8d94a5] text-xs font-mono-tech relative z-10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
+          <span className="font-bold text-white uppercase tracking-wider">
             © {new Date().getFullYear()} {PERSONAL_INFO.name}.
           </span>
-          <span className="hidden sm:inline">•</span>
-          <span>Designed with restraint & built for speed.</span>
+          <span className="hidden sm:inline text-white/30">•</span>
+          <span>ALL RIGHTS RESERVED // CREATIVE DEVELOPER & FULL STACK ENGINEER</span>
         </div>
 
-        <div className="flex items-center gap-4">
-          <span className="text-[11px] font-mono text-slate-400">
-            Next.js • Tailwind CSS • Framer Motion
+        <div className="flex items-center gap-6">
+          <span className="text-[11px] text-white/40 hidden lg:inline">
+            NEXT.JS • REACT • CANVAS • TAILWIND CSS • FRAMER MOTION
           </span>
 
           <button
             onClick={scrollToTop}
-            className="p-2 rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 text-white hover:bg-white hover:text-black transition-all"
             aria-label="Back to Top"
             title="Back to Top"
           >
-            <ArrowUp className="w-4 h-4" />
+            <span>TOP</span>
+            <ArrowUp className="w-3.5 h-3.5" />
           </button>
         </div>
       </div>

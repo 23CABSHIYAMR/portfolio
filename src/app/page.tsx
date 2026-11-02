@@ -1,32 +1,42 @@
 import React from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
-import { About } from '@/components/About';
-import { Skills } from '@/components/Skills';
 import { Projects } from '@/components/Projects';
+import { CreativeLab } from '@/components/CreativeLab';
+import { About } from '@/components/About';
 import { Experience } from '@/components/Experience';
+import { Skills } from '@/components/Skills';
 import { Resume } from '@/components/Resume';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
+import { InteractiveBackground } from '@/components/InteractiveBackground';
+import { CustomCursor } from '@/components/CustomCursor';
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-white text-slate-900 font-sans selection:bg-slate-900 selection:text-white">
-      {/* Sticky Top Navbar */}
+    <div className="relative min-h-screen bg-[#08090c] text-[#f4f5f8] font-sans selection:bg-white selection:text-black overflow-x-hidden">
+      {/* Dynamic Canvas Particles & Mesh */}
+      <InteractiveBackground />
+
+      {/* Smooth Magnetic Fluid Cursor */}
+      <CustomCursor />
+
+      {/* Fixed Patrick Heng Minimal Header */}
       <Navbar />
 
-      {/* Main Single Page Portfolio Content */}
-      <main className="space-y-0">
+      {/* Main Experience Stream */}
+      <main className="relative z-10 space-y-0">
         <Hero />
-        <About />
-        <Skills />
         <Projects />
+        <CreativeLab />
+        <About />
         <Experience />
+        <Skills />
         <Resume />
         <Contact />
       </main>
 
-      {/* Bottom Footer */}
+      {/* Bottom Minimal Footer */}
       <Footer />
     </div>
   );

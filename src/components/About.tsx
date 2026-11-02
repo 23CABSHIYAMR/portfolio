@@ -2,111 +2,128 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SectionHeader } from './UI/SectionHeader';
-import { PERSONAL_INFO } from '@/data/portfolio';
 import { ShieldCheck, Zap, Layers, Compass } from 'lucide-react';
+import { PERSONAL_INFO } from '@/data/portfolio';
 
-const PRINCIPLES = [
+const CORE_PILLARS = [
   {
     icon: Zap,
-    title: 'Performance & Optimization',
-    description: 'Fast page rendering, efficient API integration, and optimized database queries.',
+    title: 'Frame Budget & Performance',
+    description: 'Targeting 60fps+ fluid rendering, selective DOM virtualization, and optimized database queries.',
   },
   {
     icon: Layers,
-    title: 'Reusable Architecture',
-    description: 'Clean component patterns built with React, Next.js, and TypeScript.',
+    title: 'Distributed System Resilience',
+    description: 'Worker-supervisor self-recovery, FIFO queues with acknowledgments, and duplicate-event suppression.',
   },
   {
     icon: ShieldCheck,
-    title: 'Software Quality',
-    description: 'Writing maintainable code and solving real-world production engineering issues.',
+    title: 'Automated Quality Suites',
+    description: 'End-to-end browser validation with Playwright (20/20 tests in 13.2s) and structured Winston logging.',
   },
   {
     icon: Compass,
-    title: 'Intuitive UX',
-    description: 'Creating accessible, responsive, and clear user interfaces.',
+    title: 'Creative UI Engineering',
+    description: 'Interactive canvas graphics, responsive design systems, and tactile interactive micro-interactions.',
   },
 ];
 
 export const About: React.FC = () => {
   return (
-    <section id="about" className="py-20 md:py-28 bg-slate-50/60 border-y border-slate-100">
-      <div className="max-w-5xl mx-auto px-6 sm:px-8">
-        <SectionHeader
-          badge="About Me"
-          title="Building clean, efficient & scalable software."
-          description="A dedicated Software Engineer with a solid foundation in computer applications and modern web technologies."
-        />
+    <section id="about" className="py-24 md:py-36 max-w-7xl mx-auto px-6 sm:px-8 relative">
+      <div className="pb-12 border-b border-white/10 space-y-3">
+        <div className="flex items-center gap-2 text-xs font-mono-tech text-cyan-400 uppercase tracking-widest">
+          <span className="w-2 h-2 rounded-full bg-cyan-400" />
+          <span>[ 03 // ABOUT & BACKGROUND ]</span>
+        </div>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight uppercase">
+          ENGINEERING PERSPECTIVE
+        </h2>
+      </div>
 
-        {/* Narrative & Metric Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-16">
-          {/* Left Bio Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="md:col-span-7 bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-8 space-y-4 shadow-2xs"
-          >
-            <h3 className="text-xl font-bold text-slate-900 tracking-tight">
-              Software Engineer & BCA Graduate
-            </h3>
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              I am a Bachelor of Computer Applications (BCA) Graduate with hands-on software development experience. I specialize in building modern web applications using React.js, Next.js, Node.js, and REST APIs.
-            </p>
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              I enjoy building scalable web applications, continuously learning modern technologies, solving complex engineering problems, and creating clean, intuitive user experiences.
-            </p>
-          </motion.div>
+      {/* Main Split Editorial Layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start pt-12">
+        {/* Left Column: Narrative */}
+        <div className="lg:col-span-7 space-y-6">
+          <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug">
+            Bridging the gap between robust backend architectures and delightful, fluid frontends.
+          </h3>
 
-          {/* Right Highlights Stats Grid */}
-          <div className="md:col-span-5 grid grid-cols-2 gap-4">
-            {PERSONAL_INFO.stats.map((stat, idx) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="bg-white border border-slate-200/80 rounded-xl p-5 shadow-2xs space-y-1"
-              >
-                <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                  {stat.value}
-                </div>
-                <div className="text-xs font-medium text-slate-500 leading-snug">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
+          <p className="text-[#8d94a5] text-base leading-relaxed">
+            I am a Software Engineer and Bachelor of Computer Applications (BCA) Graduate based in Coimbatore, India. Currently developing real-time communications infrastructure and full-stack web applications at <span className="text-white font-medium">Sporada Secure India</span>.
+          </p>
+
+          <p className="text-[#8d94a5] text-base leading-relaxed">
+            My experience spans architecting multi-user messaging workflows, QR-based authentication, WebSocket connection recovery, and database query optimization. When building applications, I obsess over speed, responsiveness, and creating digital products that feel memorable to interact with.
+          </p>
+
+          {/* Quick Technical Specs Box */}
+          <div className="p-6 rounded-2xl bg-[#0e1017] border border-white/10 space-y-3 font-mono-tech text-xs">
+            <div className="flex items-center justify-between text-white/50 border-b border-white/10 pb-2">
+              <span>SPECIFICATION</span>
+              <span>DETAILS</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-[#8d94a5]">PRIMARY FOCUS</span>
+              <span className="text-white">Full Stack Engineering / Creative UI</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-[#8d94a5]">CORE STACK</span>
+              <span className="text-emerald-400">React.js • Next.js • Node.js • MongoDB</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-[#8d94a5]">TESTING</span>
+              <span className="text-cyan-400">Playwright E2E • Lighthouse (Core Web Vitals)</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-[#8d94a5]">CURRENT LOCATION</span>
+              <span className="text-white">Coimbatore, Tamil Nadu, India</span>
+            </div>
           </div>
         </div>
 
-        {/* 4 Pillars / Core Principles */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {PRINCIPLES.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="bg-white border border-slate-200/60 rounded-xl p-5 space-y-3 shadow-2xs hover:border-slate-300 transition-colors"
+        {/* Right Column: Telemetry & Pillars */}
+        <div className="lg:col-span-5 space-y-4">
+          <div className="grid grid-cols-2 gap-3 pb-2">
+            {PERSONAL_INFO.stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="p-5 rounded-2xl bg-[#0f1118] border border-white/10 hover:border-white/30 transition-all"
               >
-                <div className="w-9 h-9 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center">
-                  <Icon className="w-5 h-5" />
+                <div className="text-3xl font-black font-mono-tech text-white">
+                  {stat.value}
                 </div>
-                <h4 className="text-base font-semibold text-slate-900 tracking-tight">
-                  {item.title}
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  {item.description}
-                </p>
-              </motion.div>
-            );
-          })}
+                <div className="text-[11px] font-mono-tech uppercase tracking-wider text-[#8d94a5] pt-1">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Core Pillars Cards */}
+          <div className="space-y-3">
+            {CORE_PILLARS.map((pillar) => {
+              const Icon = pillar.icon;
+              return (
+                <div
+                  key={pillar.title}
+                  className="p-5 rounded-2xl bg-[#0e1017] border border-white/10 hover:border-white/25 transition-all flex items-start gap-4"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-cyan-400">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <div className="space-y-1">
+                    <h4 className="text-sm font-bold text-white tracking-tight">
+                      {pillar.title}
+                    </h4>
+                    <p className="text-xs text-[#8d94a5] leading-relaxed">
+                      {pillar.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

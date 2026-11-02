@@ -374,25 +374,25 @@ export const PROJECTS_DATA: Project[] = [
       "Reduced repetitive project initialization tasks.",
     ],
   },
-  {
-    id: "javascript-mini-projects",
-    title: "JavaScript Mini Projects",
-    subtitle: "Interactive web applications and browser utilities",
-    description:
-      "A collection of small projects demonstrating JavaScript fundamentals, interactive UI development, and browser functionality.",
-    longDescription:
-      "Built mini projects including a Blackjack game, calculator, palindrome checker, currency converter, and Chrome Tab Saver extension using HTML, CSS, and JavaScript.",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Chrome Extensions"],
-    image: "/images/javascript-projects.png",
-    demoUrl: "",
-    githubUrl: "",
-    featured: false,
-    highlights: [
-      "Built interactive browser-based applications.",
-      "Practiced DOM manipulation and event handling.",
-      "Created a Chrome extension for saving tabs.",
-    ],
-  },
+  // {
+  //   id: "javascript-mini-projects",
+  //   title: "JavaScript Mini Projects",
+  //   subtitle: "Interactive web applications and browser utilities",
+  //   description:
+  //     "A collection of small projects demonstrating JavaScript fundamentals, interactive UI development, and browser functionality.",
+  //   longDescription:
+  //     "Built mini projects including a Blackjack game, calculator, palindrome checker, currency converter, and Chrome Tab Saver extension using HTML, CSS, and JavaScript.",
+  //   techStack: ["HTML5", "CSS3", "JavaScript", "Chrome Extensions"],
+  //   image: "/images/javascript-projects.png",
+  //   demoUrl: "",
+  //   githubUrl: "",
+  //   featured: false,
+  //   highlights: [
+  //     "Built interactive browser-based applications.",
+  //     "Practiced DOM manipulation and event handling.",
+  //     "Created a Chrome extension for saving tabs.",
+  //   ],
+  // },
 ];
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
